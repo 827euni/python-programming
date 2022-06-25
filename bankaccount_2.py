@@ -1,0 +1,26 @@
+from bankaccount_1 import * 
+
+acc1=BankAccount("김철수", 30000)
+acc2=BankAccount("이영희")
+
+acc1.disp()
+acc2.disp()
+print()
+print("김철수 150000입금")
+acc1.deposit(150000)
+acc1.disp()
+print("김철수 50000출금")
+acc1.withdraw(50000)
+acc1.disp()
+
+print()
+print("이영희 50000입금")
+acc2.deposit(50000)
+acc2.disp()
+print("이영희 100000출금")
+acc2.withdraw(100000)
+acc2.disp()
+print()
+print("이자 계산후")
+acc1.calcuInterest()
+acc2.calcuInterest()

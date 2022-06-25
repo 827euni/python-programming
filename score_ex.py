@@ -1,0 +1,33 @@
+import score
+
+ban=[]
+for i in range(5):
+    name=input("성명 : ")
+    korean=int(input("국어점수 : "))
+    english=int(input("영어점수 : "))
+    math=int(input("수학점수 : "))
+    ban.append([name, korean, english, math])
+    total=score.total(ban[i])
+    ave=score.ave(ban[i])
+    grade=score.grade(ban[i])
+for st in ban:
+    score.output(st)
+print()
+print("0명 성적 비교")
+print("비교할 학생이 없음")
+print()
+print("1명 성적 비교")
+score.output(score.max_student(ban[1]))
+print()
+print("2명 성적 비교")
+score.output(ban[2])
+score.output(ban[4])
+print("성적이 더 좋은 학생")
+score.output(score.max_student(ban[2], ban[4]))
+print()
+print("3명 성적 비교")
+score.output(ban[1])
+score.output(ban[2])
+score.output(ban[3])
+print("성적이 가장 좋은 학생")
+score.output(score.max_student(ban[1],ban[2],ban[3]))
